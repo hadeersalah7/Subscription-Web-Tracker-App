@@ -1,0 +1,60 @@
+body {
+    background-color: #222;
+    color: #fff;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-style: none;
+    outline: none;
+}
+
+span {
+    font-size: 90px;
+    color: #038787;
+}
+
+.header-container{
+    width: 80%;
+ position: relative;
+}
+
+.header-wrapper h1{
+    padding-left: 50px;
+}
+
+.header-wrapper{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    align-items: center;
+}
+
+hr{
+    width: 100%;
+    margin-left: 150px;
+    position: absolute;
+    bottom: -400px
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 150px;
+    bottom: -500px
+}
+
+.login button{
+    width: 100px;
+    height: 40px;
+    border: none;
+    background-color: #038787;
+    cursor: pointer;
+    border-radius: 20px;
+    color: #fff;
+    transition: 0.5s all ease-in;
+    margin: 10px 0;
+    font-weight: 700;
+}

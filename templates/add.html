@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./static/css/add.css" />
+    <title>Adding New Subscription</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="header">
+        <h3>Add Your Subcription</h3>
+      </div>
+      <hr />
+      <form class="inputs" action="/add" method="POST">
+        <input
+          type="text"
+          id="title"
+          placeholder="Name of the service"
+          name="title"
+        />
+
+        <div class="entries">
+          <div class="select">
+            <select>
+              <option value="" disabled selected hidden>
+                Choose How Would Like To Pay
+              </option>
+              <option value="Weekly">Weekly</option>
+              <option value="Monthly">Monthly</option>
+              <option value="Yearly">Yearly</option>
+            </select>
+          </div>
+          <label for="start">Start Date:</label
+          ><input type="date" id="start" name="start" />
+          <label for="end">End Date:</label
+          ><input type="date" id="end" name="end" />
+          <input type="number" id="price" placeholder="Price" name="price" />
+          <p id="amount"></p>
+        </div>
+        <button id="addEntry">Add Subcription</button>
+      </form>
+    </div>
+    <script src="./static/js/add.js"></script>
+  </body>
+</html>

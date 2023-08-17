@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="../static/css/home.css" />
+    <title>Subcription Page</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="header">
+        <h3>Subcription App</h3>
+        <a href="/logout"><button type="button" id="logout">Logout</button></a>
+      </div>
+      <a href="/add"
+        ><button id="add">
+          <span><img src="../static/icons/add.svg" alt="delete-logo" /></span>
+        </button>
+      </a>
+
+      <table>
+        <thead>
+          <tr>
+            <th style="display: none;">ID</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Subscription/day</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for entry in entries %}
+          <tr>
+            <td style="display: none;">{{entry[0]}}</td>
+            <td>{{entry[1]}}</td>
+            <td>{{entry[2]}}</td>
+            <td>{{entry[3]}}</td>
+            <td id="endDate">
+              {{entry[4]}}
+              <span id="tool-tip" data-style-type>
+                <i class="fa-sharp fa-solid fa-circle-info"></i
+              ></span>
+            </td>
+            <td>{{entry[5]}}</td>
+
+            <td id="icons">
+              <!-- link to navigate to edit route -->
+              <a href="/edit?id={{entry[0]}}"
+                ><button id="update">
+                  <span><img src="../static/icons/edit.svg" /></span>
+                </button>
+              </a>
+
+              <!-- link to navigate to delete route -->
+              <a href="/delete?id={{entry[0]}}"
+                ><button id="delete">
+                  <span><img src="../static/icons/delete-bin-line.svg" /></span>
+                </button>
+              </a>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <script src="../static/js/home.js"></script>
+  </body>
+</html>

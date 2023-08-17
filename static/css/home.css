@@ -1,0 +1,145 @@
+body {
+    background-color: #222;
+    color: #fff;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-style: none;
+    outline: none;
+}
+
+.main-container {
+    width: 80%;
+    margin: auto
+}
+
+.header {
+    margin-top: 15px;
+    font-size: 25px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    /* text-align: center; */
+}
+
+#logout {
+    width: 100px;
+    height: 40px;
+    border: none;
+    background-color: #038787;
+    cursor: pointer;
+    border-radius: 20px;
+    color: #fff;
+    transition: 0.5s all ease-in;
+    margin: 10px 0;
+    font-weight: 700;
+}
+
+#logout:hover{
+        letter-spacing: 1px;
+        background-color: #09484d;
+    
+}
+
+
+button {
+    width: 100%;
+    height: 40px;
+    border: none;
+    background-color: #038787;
+    cursor: pointer;
+    border-radius: 20px;
+    color: #fff;
+    transition: 0.5s all ease-in;
+    margin: 10px 0;
+    font-weight: 700;
+}
+
+button:hover{
+    letter-spacing: 1px;
+    background-color: #09484d;
+    color: #fff
+}
+
+.table-row{
+    margin-top:40px;
+    margin-bottom: 40px;
+}
+table {
+    margin-top: 40px;
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+}
+
+ #icons{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;       
+  }
+
+#icons form{
+    width: 13%;
+     height: 18px;
+}
+
+#icons img{
+     width: 25px;   
+}   
+
+#add img {
+    width: 35px
+}
+
+
+th, td {
+    padding: 5px;
+}
+
+#delBtn {
+    margin: 10px 0;
+}
+
+#tool-tip {
+    position: relative;
+    color: teal;
+    font-size: 20px;
+    /* padding-left: 10px; */
+    padding-left: 5px;
+
+  }
+
+
+/* #tool-tip span {
+}   */
+  
+  #tool-tip:hover::before {
+    content: attr(data-style-type);
+    position: absolute;
+    color: #fff;
+    background-color: teal;
+    width: 120px;
+    padding: 3px;
+    border-radius: 5px;
+    top: -20px;
+    right: -200px;
+    transform: translateX(-50%);
+  }
+  
+  #tool-tip:hover::after {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent teal transparent;
+    bottom: 10px;
+    left: 22px;
+    transform: translateX(-50%);
+    transform: rotate(90deg);
+  }
+
+  .orange::before {
+    background-color: orange;
+  }
+
+  .red::before {
+    background-color: red;
+  }
